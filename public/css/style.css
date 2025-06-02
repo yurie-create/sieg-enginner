@@ -302,6 +302,7 @@ body {
   .profile {
     background-color: #f9f9f9;
     padding: 4rem 1rem;
+    min-height: 300px; /* 背景含め、全体に高さを持たせる */
   }
   
   .profile-container {
@@ -312,17 +313,16 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
   }
-  
   .profile-image {
-    flex: 1 1 200px;
-    max-width: 250px;
+    width: 200px;
+    height: 200px;
   }
   
   .profile-image img {
     width: 100%;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: block;
   }
   
   .profile-text {
@@ -352,6 +352,8 @@ body {
       padding: 0 1rem;
     }
   }
+
+
 
   .sns-links {
     margin-top: 1.5rem;
