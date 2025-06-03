@@ -70,10 +70,10 @@ body {
   }
   
   .services {
-    background-color: #f9f9f9;
-    padding: 4rem 0;
+    background: #f8f9fb;
+    padding: 6rem 1rem;
+    text-align: center;
   }
-  
 
   .section-title {
     text-align: center;
@@ -82,40 +82,65 @@ body {
     position: relative;
   }
   
+  .section-title.with-line {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 2rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .section-title.with-line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #ff6363;
+    border-radius: 2px;
+  }
+  
+  
   .service-cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;
     max-width: 1000px;
-    margin: 0 auto 4rem;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
   
   .service-card {
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     padding: 2.5rem 1.5rem;
     width: 300px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
   }
-
+  
   .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
   }
+  
   
   .service-card h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #222;
   }
   
   .service-card p {
     font-size: 1rem;
     color: #555;
+    line-height: 1.6;
   }
   
   .service-icon {
@@ -124,6 +149,11 @@ body {
     margin-bottom: 1rem;
   }
 
+  .portfolio {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+  }
   .portfolio-item {
     display: flex;
     flex-wrap: wrap;
@@ -303,6 +333,7 @@ body {
     background-color: #f9f9f9;
     padding: 4rem 1rem;
     min-height: 300px; /* 背景含め、全体に高さを持たせる */
+    text-align: center;
   }
   
   .profile-container {
@@ -323,6 +354,8 @@ body {
     border-radius: 50%;
     object-fit: cover;
     display: block;
+    
+  box-shadow: 0 4px 12px rgba(0,0,0,0.9);
   }
   
   .profile-text {
@@ -373,7 +406,7 @@ body {
   }
   
   .sns-links-inline {
-    display: flex;
+    display: inline-flex;
     gap: 1rem;
     align-items: center;
     margin: 0.5rem 0 1rem;
@@ -390,8 +423,9 @@ body {
   }
   
   .contact {
-    background: #eeeded;
+    background: #fff;
     padding: 4rem 1rem;
+    text-align: center;
   }
   
   .contact-form {
@@ -667,4 +701,23 @@ body {
     gap: 0.5rem;
   }
  
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.wave-divider {
+  width: 100%;
+  height: 100px;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

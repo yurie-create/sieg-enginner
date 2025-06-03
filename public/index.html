@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 <body>
@@ -33,34 +34,44 @@
       <h1>あなたの「想い」をカタチに。<br>
     <span class="company-name">Siegエンジニア</span></h1>
       <p>中小企業・個人事業主様向けの<br>高品質なWebサイトを制作します</p>
-      <a href="#contact" class="btn-primary">無料で相談してみる</a>
-    </div>
+      <a href="#contact" class="btn-primary">
+        <i class="fas fa-paper-plane"></i> 無料で相談してみる
+      </a>
+      
   </header>
   <section class="services" id="services">
-    <h2 class="section-title">サービス紹介</h2>
+    <h2 class="section-title with-line" data-aos="fade-up">サービス紹介</h2>
     <div class="service-cards">
-      <div class="service-card">
+      <div class="service-card"  data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-laptop-code service-icon"></i>
         <h3>ホームページ制作</h3>
         <p>企業や個人向けに、スマホ対応・SEOを考慮したWebサイトを制作します。</p>
       </div>
-      <div class="service-card">
+      <div class="service-card"  data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-bullhorn service-icon"></i>
         <h3>ランディングページ</h3>
         <p>商品やサービスの訴求に特化した1ページ構成のLPを短納期で制作します。</p>
       </div>
-      <div class="service-card">
+      <div class="service-card"  data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-server service-icon"></i>
         <h3>Node.js開発対応</h3>
         <p>お問い合わせフォームの実装から、<strong>ログイン機能</strong>や<strong>予約システム</strong>などの動的Webアプリ開発まで対応可能です。</p>
       </div>
     </div>
   </section>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    
+      <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="#f9f9f9"></path>
+    </svg>
+  </div>
+  
   
   <section class="portfolio" id="portfolio">
-    <h2 class="section-title">制作実績</h2>
+    <h2 class="section-title with-line">制作実績</h2>
   
-    <div class="portfolio-item">
+    <div class="portfolio-item"  data-aos="fade-up" data-aos-delay="200">
       <h3>予約システム付き教室サイト</h3>
         <div class="portfolio-image">
           <img src="images/スクリーンショット 2025-05-29 21.55.28.png" alt="予約システムサイト">
@@ -77,15 +88,18 @@
           <a href="https://track-reservation.onrender.com/login" class="btn-outline" target="_blank">サイトを見る</a>
         </div>
       </div>
+     
       
   
-    <div class="portfolio-item">
-      <h3>お問い合わせフォーム付きランディングページ</h3>
+    <div class="portfolio-item"  data-aos="fade-up" data-aos-delay="200">
+      <h3>お問い合わせフォーム付き
+        ランディングページ</h3>
       <div class="portfolio-image">
         <img src="images/スクリーンショット 2025-05-29 21.23.05.png" alt="LP制作例">
       </div>
       <div class="portfolio-text">
-        <p>HTML/CSS/JavaScriptで構築し、スマホ対応・アニメーション・お問い合わせフォームも搭載。</p>
+        <p>HTML/CSS/JavaScriptで構築。<br>
+          スマホ対応・アニメーション・お問い合わせフォームも搭載。</p>
         <ul class="tech-tags">
           <li>HTML</li>
           <li>CSS</li>
@@ -98,9 +112,19 @@
   
   </section>
 
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <!-- ▼ポイント：波の向きを逆にし、fillをグレーに -->
+      <path d="M0,120 C480,0 960,120 1440,0 L1440,120 L0,120 Z" fill="#f9f9f9"></path>
+    </svg>
+  </div>
+  
+
+
+
 
   <section class="profile" id="profile">
-    <h2 class="section-title">プロフィール</h2>
+    <h2 class="section-title with-line">プロフィール</h2>
     <div class="profile-container">
       <div class="profile-image">
         <img src="images/IMG_4397.jpg" alt="プロフィール写真">
@@ -135,8 +159,15 @@
       
     </div>
   </section>
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    
+      <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="#f9f9f9"></path>
+    </svg>
+  </div>
+  
   <section class="contact" id="contact">
-    <h2 class="section-title">お問い合わせ</h2>
+    <h2 class="section-title with-line">お問い合わせ</h2>
     <p class="contact-intro">
       サービスに関するご相談・ご質問・お見積もり依頼など
       お気軽にお問い合わせください。<br>
@@ -171,6 +202,15 @@
   
   
 </body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out',
+    once: false
+  });
+</script>
+
 <script>
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('site-nav');
